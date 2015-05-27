@@ -1,6 +1,6 @@
 <section id="scripts">
 <?php
-$output = [];
+$output = array();
 $videos = get_posts('posts_per_page=-1');
 if ($videos) {
   foreach($videos as $post) {
