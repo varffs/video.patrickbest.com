@@ -5,10 +5,10 @@ $videos = get_posts('posts_per_page=-1');
 if ($videos) {
   foreach($videos as $post) {
     $meta = get_post_meta($post->ID);
-    $output[] = [
+    $output[] = array(
       'caption' => $post->post_title,
       'webm' => $meta['_igv_webm'][0]
-    ];
+    );
   }
   echo '<script>';
   echo 'var videos = ' . json_encode($output);
